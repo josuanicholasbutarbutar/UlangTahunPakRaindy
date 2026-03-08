@@ -1327,17 +1327,27 @@
         });
 
         // ===== WELCOME SPLASH =====
-        welcomeSplash.addEventListener('click', () => {
-            welcomeSplash.classList.add('hidden');
-            playMusic();
-            startSlideshow();
-        });
+        let splashDismissed = false;
 
-        welcomeSplash.addEventListener('touchstart', (e) => {
-            e.preventDefault();
+        function dismissSplash() {
+            if (splashDismissed) return;
+            splashDismissed = true;
             welcomeSplash.classList.add('hidden');
-            playMusic();
+            // Ensure music plays immediately
+            bgMusic.volume = 1.0;
+            bgMusic.currentTime = 0;
+            bgMusic.play().then(() => {
+                isMusicPlaying = true;
+                musicToggle.classList.add('playing');
+                musicIcon.textContent = '🔊';
+            }).catch(() => {});
             startSlideshow();
+        }
+
+        welcomeSplash.addEventListener('click', dismissSplash);
+        welcomeSplash.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            dismissSplash();
         });
 
         // ===== INIT =====
