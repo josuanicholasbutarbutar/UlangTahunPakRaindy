@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Pak Raindy! 🎂</title>
+    <meta name="description"
+        content="Ucapan selamat ulang tahun untuk Pak Raindy, IT Manager Hotel Four Points By Sheraton Bintan">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue-deep: #0a1628;
+            --blue-dark: #0f2847;
+            --blue-mid: #1a4a7a;
+            --blue-light: #2e7bcf;
+            --blue-glow: #4da3ff;
+            --gold: #d4a853;
+            --gold-light: #f0d48a;
+            --gold-dark: #b8922e;
+            --white: #ffffff;
+            --white-soft: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.5);
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background: var(--blue-deep);
+            color: var(--white);
+        }
+
+        /* ===== PARTICLES ===== */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: drift linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.6;
+                transform: translateY(75vh) translateX(10px) scale(1);
+            }
+
+            85% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(-10vh) translateX(-10px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+
+        /* ===== SLIDESHOW WRAPPER ===== */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* ===== SCENE ===== */
+        .scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .scene.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+            z-index: 5;
+        }
+
+        .scene.exit-left {
+            opacity: 0;
+            transform: translateX(-60px) scale(0.95);
+        }
+
+        .scene.exit-right {
+            opacity: 0;
+            transform: translateX(60px) scale(0.95);
+        }
+
+        /* ===== SCENE BACKGROUNDS ===== */
+        .scene-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .scene .content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        /* Background variants */
+        .bg-radial-blue {
+            background: radial-gradient(ellipse at center, rgba(26, 74, 122, 0.4) 0%, var(--blue-deep) 70%);
+        }
+
+        .bg-radial-gold {
+            background:
+                radial-gradient(ellipse at 30% 40%, rgba(212, 168, 83, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(26, 74, 122, 0.3) 0%, transparent 50%),
+                var(--blue-deep);
+        }
+
+        .bg-celebration {
+            background:
+                radial-gradient(ellipse at 50% 30%, rgba(212, 168, 83, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 70%, rgba(46, 123, 207, 0.2) 0%, transparent 50%),
+                var(--blue-deep);
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .text-opening {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            color: var(--white-soft);
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .text-hbd {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: shimmer 3s ease-in-out infinite;
+            line-height: 1.1;
+        }
+
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .text-role {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        .text-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.5rem, 12vw, 8rem);
+            color: var(--gold-light);
+            line-height: 1.2;
+            text-shadow: 0 0 40px rgba(212, 168, 83, 0.3);
+        }
+
+        .text-message {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            font-weight: 300;
+            color: var(--white-soft);
+            line-height: 2;
+            max-width: 600px;
+        }
+
+        .text-closing {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: shimmer 3s ease-in-out infinite;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .text-from-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-from-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+
+        .text-from-role {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+
+        .from-person {
+            margin-bottom: 1rem;
+        }
+
+        /* ===== TYPEWRITER ===== */
+        .typewriter {
+            display: inline;
+        }
+
+        .typewriter .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: var(--gold);
+            margin-left: 3px;
+            vertical-align: text-bottom;
+            animation: blink 0.8s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ===== DECORATIVE ELEMENTS ===== */
+        .deco-line {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 1.5rem auto;
+        }
+
+        .deco-stars {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            letter-spacing: 10px;
+            opacity: 0.6;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            background: rgba(212, 168, 83, 0.1);
+            border: 1px solid rgba(212, 168, 83, 0.25);
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(212, 168, 83, 0.2);
+            border-color: var(--gold);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(212, 168, 83, 0.2);
+        }
+
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.2;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .slide-counter {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* ===== CONFETTI CANVAS ===== */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* ===== SCENE-SPECIFIC ANIMATIONS ===== */
+        .scene.active .animate-in {
+            animation: fadeSlideIn 0.8s ease forwards;
+        }
+
+        .scene.active .animate-in-delay-1 {
+            animation: fadeSlideIn 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .scene.active .animate-in-delay-2 {
+            animation: fadeSlideIn 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .scene.active .animate-in-delay-3 {
+            animation: fadeSlideIn 0.8s ease 0.9s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scene.active .scale-in {
+            animation: scaleIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Glow pulse for name */
+        .glow-pulse {
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+
+            0%,
+            100% {
+                text-shadow: 0 0 30px rgba(212, 168, 83, 0.2);
+            }
+
+            50% {
+                text-shadow: 0 0 60px rgba(212, 168, 83, 0.5), 0 0 90px rgba(212, 168, 83, 0.2);
+            }
+        }
+
+        /* Emoji celebration */
+        .emoji-celebration {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounceEmoji 1.5s ease-in-out infinite;
+        }
+
+        @keyframes bounceEmoji {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-10px) rotate(-5deg);
+            }
+
+            75% {
+                transform: translateY(-5px) rotate(5deg);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .scene {
+                padding: 2rem 1.5rem;
+            }
+
+            .scene .content {
+                max-width: 90%;
+            }
+
+            .text-message {
+                font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+                line-height: 1.8;
+                max-width: 90%;
+            }
+
+            .text-closing {
+                margin-bottom: 1.5rem;
+            }
+
+            .text-from-label {
+                margin-bottom: 1rem;
+            }
+
+            .nav-controls {
+                bottom: 1.5rem;
+                gap: 1.2rem;
+            }
+
+            .deco-line {
+                margin: 1rem auto;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            html, body {
+                height: 100%;
+                height: 100dvh;
+            }
+
+            .scene {
+                padding: 1.2rem 1rem;
+                justify-content: center;
+            }
+
+            .scene .content {
+                max-width: 95%;
+            }
+
+            .text-opening {
+                font-size: clamp(1rem, 4.5vw, 1.4rem);
+                line-height: 1.7;
+                letter-spacing: 0.5px;
+            }
+
+            .text-hbd {
+                font-size: clamp(2.5rem, 14vw, 4.5rem);
+                line-height: 1.15;
+            }
+
+            .text-role {
+                font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+                letter-spacing: 2px;
+            }
+
+            .text-name {
+                font-size: clamp(2.8rem, 15vw, 5rem);
+            }
+
+            .text-message {
+                font-size: clamp(0.88rem, 3.8vw, 1.05rem);
+                line-height: 1.75;
+                max-width: 100%;
+                padding: 0 0.3rem;
+            }
+
+            .text-closing {
+                font-size: clamp(1.6rem, 8vw, 2.8rem);
+                margin-bottom: 1rem;
+                line-height: 1.3;
+            }
+
+            .text-from-label {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 0.8rem;
+            }
+
+            .text-from-name {
+                font-size: 0.95rem;
+            }
+
+            .text-from-role {
+                font-size: 0.75rem;
+            }
+
+            .from-person {
+                margin-bottom: 0.6rem;
+            }
+
+            .badge {
+                font-size: 0.65rem;
+                padding: 0.3rem 0.9rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 1rem;
+            }
+
+            .deco-stars {
+                font-size: 1.2rem;
+                letter-spacing: 8px;
+                margin-bottom: 1rem;
+            }
+
+            .deco-line {
+                width: 45px;
+                margin: 0.8rem auto;
+            }
+
+            .emoji-celebration {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-controls {
+                bottom: 1rem;
+                gap: 0.8rem;
+            }
+
+            .nav-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            .slide-counter {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+                min-width: 40px;
+            }
+
+            .touch-left,
+            .touch-right {
+                top: 0;
+                height: calc(100% - 80px);
+                width: 25%;
+            }
+
+            .welcome-splash .splash-emoji {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .welcome-splash .splash-title {
+                font-size: clamp(1.8rem, 9vw, 2.5rem);
+                margin-bottom: 0.8rem;
+            }
+
+            .welcome-splash .splash-tap {
+                font-size: 0.85rem;
+                letter-spacing: 3px;
+            }
+        }
+
+        /* Small mobile */
+        @media (max-width: 360px) {
+            .scene {
+                padding: 1rem 0.8rem;
+            }
+
+            .text-hbd {
+                font-size: clamp(2.2rem, 13vw, 3.5rem);
+            }
+
+            .text-name {
+                font-size: clamp(2.5rem, 14vw, 4rem);
+            }
+
+            .text-message {
+                font-size: 0.85rem;
+                line-height: 1.7;
+            }
+
+            .text-closing {
+                font-size: clamp(1.4rem, 7vw, 2.2rem);
+                margin-bottom: 0.8rem;
+            }
+
+            .nav-controls {
+                bottom: 0.8rem;
+            }
+
+            .nav-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Handle landscape mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .scene {
+                padding: 0.8rem 2rem;
+            }
+
+            .text-hbd {
+                font-size: clamp(2rem, 8vh, 3.5rem);
+            }
+
+            .text-name {
+                font-size: clamp(2.5rem, 10vh, 4rem);
+            }
+
+            .text-message {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .text-closing {
+                font-size: clamp(1.5rem, 6vh, 2.5rem);
+                margin-bottom: 0.5rem;
+            }
+
+            .emoji-celebration {
+                font-size: 1.8rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .deco-stars {
+                margin-bottom: 0.5rem;
+            }
+
+            .deco-line {
+                margin: 0.5rem auto;
+            }
+
+            .nav-controls {
+                bottom: 0.5rem;
+            }
+
+            .nav-btn {
+                width: 36px;
+                height: 36px;
+            }
+
+            .text-from-label {
+                margin-bottom: 0.5rem;
+            }
+
+            .from-person {
+                margin-bottom: 0.3rem;
+            }
+
+            .welcome-splash .splash-emoji {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .welcome-splash .splash-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* ===== TOUCH AREAS ===== */
+        .touch-left,
+        .touch-right {
+            position: fixed;
+            top: 40px;
+            width: 30%;
+            height: calc(100% - 120px);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .touch-left {
+            left: 0;
+        }
+
+        .touch-right {
+            right: 0;
+        }
+
+        /* ===== MUSIC TOGGLE ===== */
+        /* ===== WELCOME SPLASH ===== */
+        .welcome-splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: radial-gradient(ellipse at center, rgba(15, 40, 71, 0.95) 0%, rgba(10, 22, 40, 0.98) 70%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .welcome-splash.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .welcome-splash .splash-emoji {
+            font-size: 4rem;
+            animation: bounceEmoji 1.5s ease-in-out infinite;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-splash .splash-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-splash .splash-tap {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .music-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 200;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--white);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .music-toggle:hover {
+            background: rgba(212, 168, 83, 0.2);
+            border-color: var(--gold);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(212, 168, 83, 0.2);
+        }
+
+        .music-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .music-toggle .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .music-toggle.playing .icon {
+            animation: musicPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes musicPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        @media (max-width: 600px) {
+            .music-toggle {
+                top: 12px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music_for_video-happy-birthday-to-you-piano-version-13976.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button class="music-toggle playing" id="musicToggle" aria-label="Toggle Music" title="Toggle Music">
+        <span class="icon" id="musicIcon">🔊</span>
+    </button>
+
+    <!-- Welcome Splash -->
+    <div class="welcome-splash" id="welcomeSplash">
+        <div class="splash-emoji">🎂</div>
+        <div class="splash-title">Happy Birthday!</div>
+        <div class="splash-tap">TAP TO START</div>
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Touch Areas for mobile -->
+    <div class="touch-left" id="touchLeft"></div>
+    <div class="touch-right" id="touchRight"></div>
+
+    <!-- Slideshow -->
+    <div class="slideshow" id="slideshow">
+
+        <!-- Scene 1: Opening -->
+        <div class="scene bg-radial-blue" data-scene="0">
+            <div class="scene-bg bg-radial-blue"></div>
+            <div class="content">
+                <div class="deco-stars animate-in">✦ ✦ ✦</div>
+                <p class="text-opening">
+                    <span class="typewriter" id="typewriter-1"></span><span class="cursor" id="cursor-1"></span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 2: Happy Birthday -->
+        <div class="scene" data-scene="1">
+            <div class="scene-bg bg-radial-gold"></div>
+            <div class="content">
+                <div class="emoji-celebration animate-in">🎂</div>
+                <h1 class="text-hbd scale-in" style="animation-delay: 0.2s; opacity: 0;">Happy<br>Birthday</h1>
+            </div>
+        </div>
+
+        <!-- Scene 3: To Our IT Manager -->
+        <div class="scene" data-scene="2">
+            <div class="scene-bg bg-radial-blue"></div>
+            <div class="content">
+                <div class="badge animate-in">Four Points By Sheraton Bintan</div>
+                <p class="text-opening animate-in-delay-1">To Our Beloved</p>
+                <div class="deco-line animate-in-delay-2"></div>
+                <p class="text-role animate-in-delay-2"
+                    style="font-size: clamp(1.3rem, 3vw, 1.8rem); letter-spacing: 4px;">IT Manager</p>
+            </div>
+        </div>
+
+        <!-- Scene 4: Pak Raindy -->
+        <div class="scene" data-scene="3">
+            <div class="scene-bg bg-radial-gold"></div>
+            <div class="content">
+                <p class="text-name glow-pulse scale-in">Pak Raindy</p>
+            </div>
+        </div>
+
+        <!-- Scene 5: Birthday Message Part 1 -->
+        <div class="scene" data-scene="4">
+            <div class="scene-bg bg-radial-blue"></div>
+            <div class="content">
+                <div class="deco-stars animate-in" style="font-size: 1rem;">✦</div>
+                <p class="text-message animate-in-delay-1">
+                    Selamat ulang tahun Pak Raindy.<br><br>
+                    Semoga selalu diberikan kesehatan, kebahagiaan, dan kesuksesan dalam memimpin tim IT di Hotel Four
+                    Points By Sheraton Bintan.
+                </p>
+            </div>
+        </div>
+
+        <!-- Scene 6: Birthday Message Part 2 -->
+        <div class="scene" data-scene="5">
+            <div class="scene-bg bg-radial-gold"></div>
+            <div class="content">
+                <p class="text-message animate-in" style="font-style: italic; color: var(--gold-light);">
+                    "Terima kasih atas bimbingan, arahan, dan inspirasi yang selalu Bapak berikan kepada kami."
+                </p>
+                <div class="deco-line animate-in-delay-1"></div>
+            </div>
+        </div>
+
+        <!-- Scene 7: Closing Wish -->
+        <div class="scene" data-scene="6">
+            <div class="scene-bg bg-radial-blue"></div>
+            <div class="content">
+                <p class="text-message animate-in">
+                    Semoga tahun ini membawa lebih banyak pencapaian, kebahagiaan, dan kesuksesan.
+                </p>
+                <div class="deco-line animate-in-delay-1"></div>
+                <p class="animate-in-delay-2" style="font-size: 2rem; margin-top: 0.5rem;">🙏</p>
+            </div>
+        </div>
+
+        <!-- Scene 8: Final -->
+        <div class="scene" data-scene="7">
+            <div class="scene-bg bg-celebration"></div>
+            <div class="content">
+                <div class="emoji-celebration animate-in">🎉</div>
+                <h2 class="text-closing scale-in" style="animation-delay: 0.2s; opacity: 0;">Happy Birthday<br>Pak
+                    Raindy 🎂</h2>
+                <div class="deco-line animate-in-delay-1"></div>
+                <p class="text-from-label animate-in-delay-2">With appreciation from</p>
+                <div class="animate-in-delay-3">
+                    <div class="from-person">
+                        <p class="text-from-name">Pak Fadel</p>
+                        <p class="text-from-role">IT Supervisor</p>
+                    </div>
+                    <div class="from-person">
+                        <p class="text-from-name">Josua</p>
+                        <p class="text-from-role">IT Trainee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-controls">
+        <button class="nav-btn" id="btnBack" aria-label="Previous">
+            ‹
+        </button>
+        <span class="slide-counter" id="slideCounter">1 / 8</span>
+        <button class="nav-btn" id="btnNext" aria-label="Next">
+            ›
+        </button>
+    </div>
+
+    <script>
+        // ===== CONFIG =====
+        const TOTAL_SCENES = 8;
+        const AUTO_INTERVAL = 5000; // 5 seconds
+        let currentScene = 0;
+        let autoTimer = null;
+        let progressAnimation = null;
+
+        // ===== DOM REFS =====
+        const scenes = document.querySelectorAll('.scene');
+        const btnBack = document.getElementById('btnBack');
+        const btnNext = document.getElementById('btnNext');
+        const slideCounter = document.getElementById('slideCounter');
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const touchLeft = document.getElementById('touchLeft');
+        const touchRight = document.getElementById('touchRight');
+        const welcomeSplash = document.getElementById('welcomeSplash');
+
+        // ===== PARTICLES =====
+        const particlesEl = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 4 + 1;
+            const isGold = Math.random() > 0.5;
+            p.style.cssText = `
+                width: ${size}px; height: ${size}px;
+                left: ${Math.random() * 100}%;
+                background: ${isGold ? `rgba(212,168,83,${Math.random() * 0.4 + 0.2})` : `rgba(77,163,255,${Math.random() * 0.3 + 0.1})`};
+                animation-duration: ${Math.random() * 18 + 12}s;
+                animation-delay: ${Math.random() * 12}s;
+            `;
+            particlesEl.appendChild(p);
+        }
+
+        // ===== TYPEWRITER EFFECT =====
+        const typewriterTexts = {
+            1: 'Today is a special day...'
+        };
+
+        let typewriterTimers = {};
+
+        function startTypewriter(id, text, speed = 65) {
+            const el = document.getElementById(`typewriter-${id}`);
+            const cursorEl = document.getElementById(`cursor-${id}`);
+            if (!el) return;
+
+            el.textContent = '';
+            if (cursorEl) cursorEl.style.display = 'inline-block';
+
+            let i = 0;
+            if (typewriterTimers[id]) clearInterval(typewriterTimers[id]);
+
+            typewriterTimers[id] = setInterval(() => {
+                if (i < text.length) {
+                    el.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typewriterTimers[id]);
+                }
+            }, speed);
+        }
+
+        function stopTypewriter(id) {
+            if (typewriterTimers[id]) {
+                clearInterval(typewriterTimers[id]);
+            }
+        }
+
+        // ===== CONFETTI =====
+        const ctx = confettiCanvas.getContext('2d');
+        let confettiPieces = [];
+        let confettiActive = false;
+
+        function resizeCanvas() {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const confettiColors = ['#d4a853', '#f0d48a', '#4da3ff', '#2e7bcf', '#fff', '#ff6b8a', '#50e3c2', '#f5a623', '#b8e986', '#bd10e0'];
+
+        class ConfettiPiece {
+            constructor() { this.reset(true); }
+
+            reset(initial = false) {
+                this.x = Math.random() * confettiCanvas.width;
+                this.y = initial ? Math.random() * -confettiCanvas.height : -10;
+                this.size = Math.random() * 7 + 3;
+                this.speedY = Math.random() * 3 + 1.5;
+                this.speedX = Math.random() * 2 - 1;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 8 - 4;
+                this.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+                this.shape = Math.floor(Math.random() * 3);
+                this.opacity = Math.random() * 0.6 + 0.4;
+                this.wobble = Math.random() * 10;
+                this.wobbleSpeed = Math.random() * 0.08 + 0.03;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX + Math.sin(this.wobble) * 0.5;
+                this.rotation += this.rotationSpeed;
+                this.wobble += this.wobbleSpeed;
+                if (this.y > confettiCanvas.height + 20) {
+                    if (confettiActive) this.reset();
+                    else this.opacity = 0;
+                }
+            }
+
+            draw() {
+                if (this.opacity <= 0) return;
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation * Math.PI / 180);
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                if (this.shape === 0) {
+                    ctx.fillRect(-this.size / 2, -this.size / 3, this.size, this.size * 0.6);
+                } else if (this.shape === 1) {
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.size / 2);
+                    ctx.lineTo(this.size / 2, this.size / 2);
+                    ctx.lineTo(-this.size / 2, this.size / 2);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+        }
+
+        function initConfetti() {
+            confettiPieces = [];
+            confettiActive = true;
+            for (let i = 0; i < 150; i++) {
+                confettiPieces.push(new ConfettiPiece());
+            }
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            if (confettiPieces.length === 0) { requestAnimationFrame(animateConfetti); return; }
+            confettiPieces.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateConfetti);
+        }
+        animateConfetti();
+
+        function stopConfetti() {
+            confettiActive = false;
+        }
+
+        function clearConfetti() {
+            confettiActive = false;
+            confettiPieces = [];
+            ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        }
+
+        // ===== SCENE MANAGEMENT =====
+        function goToScene(index, direction = 'next') {
+            if (index < 0 || index >= TOTAL_SCENES || index === currentScene) return;
+
+            const prevScene = scenes[currentScene];
+            const nextScene = scenes[index];
+
+            // Exit animation
+            prevScene.classList.remove('active');
+            prevScene.classList.add(direction === 'next' ? 'exit-left' : 'exit-right');
+            setTimeout(() => {
+                prevScene.classList.remove('exit-left', 'exit-right');
+            }, 800);
+
+            // Stop typewriter if leaving scene 1
+            if (currentScene === 0) stopTypewriter(1);
+
+            // Clear confetti when leaving final scene
+            if (currentScene === TOTAL_SCENES - 1) clearConfetti();
+
+            currentScene = index;
+
+            // Enter animation
+            nextScene.classList.add('active');
+
+            // Start typewriter if entering scene 1
+            if (currentScene === 0) {
+                startTypewriter(1, typewriterTexts[1]);
+            }
+
+            // Start confetti on final scene
+            if (currentScene === TOTAL_SCENES - 1) {
+                initConfetti();
+            }
+
+            // Update UI
+            slideCounter.textContent = `${currentScene + 1} / ${TOTAL_SCENES}`;
+            updateNavButtons();
+            resetAutoSlide();
+        }
+
+        function nextScene() {
+            if (currentScene < TOTAL_SCENES - 1) {
+                goToScene(currentScene + 1, 'next');
+            }
+        }
+
+        function prevScene() {
+            if (currentScene > 0) {
+                goToScene(currentScene - 1, 'back');
+            }
+        }
+
+        function updateNavButtons() {
+            btnBack.disabled = currentScene === 0;
+            // Don't disable next on last scene, just let it stop
+        }
+
+        // ===== AUTO SLIDE =====
+        function resetAutoSlide() {
+            clearTimeout(autoTimer);
+            if (currentScene < TOTAL_SCENES - 1) {
+                autoTimer = setTimeout(() => {
+                    nextScene();
+                }, AUTO_INTERVAL);
+            }
+        }
+
+        // ===== EVENT LISTENERS =====
+        btnNext.addEventListener('click', () => {
+            if (currentScene < TOTAL_SCENES - 1) nextScene();
+        });
+
+        btnBack.addEventListener('click', () => {
+            prevScene();
+        });
+
+        touchRight.addEventListener('click', () => {
+            if (currentScene < TOTAL_SCENES - 1) nextScene();
+        });
+
+        touchLeft.addEventListener('click', () => {
+            prevScene();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (currentScene < TOTAL_SCENES - 1) nextScene();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevScene();
+            }
+        });
+
+        // Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0 && currentScene < TOTAL_SCENES - 1) {
+                    nextScene();
+                } else if (diff < 0) {
+                    prevScene();
+                }
+            }
+        }, { passive: true });
+
+        // ===== MUSIC CONTROL =====
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        let isMusicPlaying = false;
+
+        function playMusic() {
+            bgMusic.play().then(() => {
+                isMusicPlaying = true;
+                musicToggle.classList.add('playing');
+                musicIcon.textContent = '🔊';
+            }).catch(() => {
+                // Autoplay blocked, will retry on user interaction
+            });
+        }
+
+        function pauseMusic() {
+            bgMusic.pause();
+            isMusicPlaying = false;
+            musicToggle.classList.remove('playing');
+            musicIcon.textContent = '🔇';
+        }
+
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        }
+
+        musicToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMusic();
+        });
+
+        // ===== WELCOME SPLASH =====
+        welcomeSplash.addEventListener('click', () => {
+            welcomeSplash.classList.add('hidden');
+            playMusic();
+            startSlideshow();
+        });
+
+        welcomeSplash.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            welcomeSplash.classList.add('hidden');
+            playMusic();
+            startSlideshow();
+        });
+
+        // ===== INIT =====
+        function startSlideshow() {
+            scenes[0].classList.add('active');
+            slideCounter.textContent = `1 / ${TOTAL_SCENES}`;
+            updateNavButtons();
+            startTypewriter(1, typewriterTexts[1]);
+            resetAutoSlide();
+        }
+    </script>
+</body>
+
+</html>
